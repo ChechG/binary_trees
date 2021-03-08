@@ -69,7 +69,9 @@ Please use the following data structures and types for binary trees. Don’t for
 Note: For tasks 0 to 23 (included), you have to deal with simple binary trees. They are not BSTs, thus they don’t follow any kind of rule.
 
 **Print function**
+
 To match the examples in the tasks, you are given this function
+
                             .----------------------(006)-------.
                         .--(001)-------.                   .--(008)--.
                   .--(-02)       .--(003)-------.       (007)     (009)
