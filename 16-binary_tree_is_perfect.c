@@ -3,6 +3,7 @@
 size_t binary_height(const binary_tree_t *tree);
 int binary_tree_is_full(const binary_tree_t *tree);
 int binary_tree_balance(const binary_tree_t *tree);
+int binary_tree_is_perfect(const binary_tree_t *tree);
 
 /**
  * binary_tree_is_full - measures the balance factor of a binary tree
@@ -47,9 +48,13 @@ size_t binary_height(const binary_tree_t *tree)
 
 	if (tree == NULL)
 		return (0);
-	num_left =  binary_height(tree->left);
-	num_right = binary_height(tree->right);
-	return (1 + (num_left > num_right ? num_left : num_right));
+	if (tree->right != NULL || tree->left != NULL)
+	{
+		num_left =  binary_tree_height(tree->left);
+		num_right = binary_tree_height(tree->right);
+		return (1 + (num_left > num_right ? num_left : num_right));
+	}
+	return (0);
 }
 
 /**
